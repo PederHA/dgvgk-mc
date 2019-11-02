@@ -7,5 +7,5 @@ curl -s https://packagecloud.io/install/repositories/immortal/immortal/script.de
 sudo apt install -y immortal && \
 mkdir -p server && \
 cd server && \
-curl -o "paper.jar" https://papermc.io/api/v1/paper/1.14.4/225/download
-echo "eula=true" > eula.txt && \
+curl -o "paper.jar" https://papermc.io/api/v1/paper/1.14.4/225/download && \
+echo "eula=true" > eula.txt
