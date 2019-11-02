@@ -1,10 +1,11 @@
 #!/bin/bash
 
-MC_DIR="/minecraft"
-SRV_DIR="$MC_DIR/server"
 WORLD="DGVGK"
 
+MC_DIR="/minecraft"
 BACKUP_DIR="$MC_DIR/backup"
+SRV_DIR="$MC_DIR/server"
+
 FILENAME="$WORLD-$(date +%Y-%m-%d-%H%M)"
 FPATH="$BACKUP_DIR/$FILENAME"
 CHECKSUMFILE="$BACKUP_DIR/checksum.md5"
