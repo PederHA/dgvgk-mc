@@ -40,5 +40,5 @@ gzip $FPATH.tar
 # Sync compressed tarball with bucket
 gsutil cp $FPATH.tar.gz gs://dgvgk-minecraft
 
-# Remove compressed tarball local drive
+# Remove compressed tarball from local drive
 rm $FPATH.tar.gz
