@@ -1,0 +1,10 @@
+worlds["DGVGK"] = "/minecraft/server/DGVGK"
+
+renders["normal"] = {
+    "world": "DGVGK",
+    "title": "Entire World",
+    "rendermode": "smooth_lighting",
+}
+
+outputdir = "/var/www/html"
+texturepath="$HOME/.minecraft/versions/1.14/1.14.jar"
