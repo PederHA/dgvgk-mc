@@ -1,0 +1,7 @@
+region: eu
+tunnels:
+  mcserver:
+      proto: tcp
+      addr: 25565
+console_ui: false
+web_addr: 0.0.0.0:4040

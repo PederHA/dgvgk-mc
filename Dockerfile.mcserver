@@ -1,0 +1,12 @@
+FROM ubuntu:20.04
+WORKDIR /server
+COPY ngrok/ngrok.yml ngrok.yml
+ARG NGROK_AUTHTOKEN
+ENV NGROK_AUTHTOKEN $NGROK_AUTHTOKEN
+COPY install_mcserver.sh install.sh
+RUN ./install.sh
+COPY server /server
+CMD /root/.ngrok2/ngrok start mcserver & /usr/bin/java -Xms1G -Xmx4G -XX:+UseG1GC -XX:+UnlockExperimentalVMOptions -XX:MaxGCPauseMillis=100 -XX:+DisableExplicitGC -XX:TargetSurvivorRatio=90 -XX:G1NewSizePercent=50 -XX:G1MaxNewSizePercent=80 -XX:G1MixedGCLiveThresholdPercent=35 -XX:+AlwaysPreTouch -XX:+ParallelRefProcEnabled -Dusing.aikars.flags=mcflags.emc.gs -jar paper.jar nogui
+EXPOSE 25565/tcp
+EXPOSE 25565/udp
+VOLUME /mcserver

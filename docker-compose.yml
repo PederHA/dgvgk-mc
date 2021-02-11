@@ -1,0 +1,28 @@
+version: "3.9"
+
+networks:
+  dgvgkmc:
+    attachable: true
+
+services:
+  mcserver:
+    build:
+      args:
+        - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+      context: .
+      dockerfile: Dockerfile.mcserver
+    ports:
+      - "25585:25565"
+    volumes:
+      - mcserver:/server
+    networks:
+      - dgvgkmc
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.bot
+    networks:
+      - dgvgkmc
+
+volumes:
+  mcserver:

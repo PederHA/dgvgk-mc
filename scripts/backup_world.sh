@@ -2,7 +2,7 @@
 
 WORLD="DGVGK"
 
-MC_DIR="/minecraft"
+MC_DIR="/server"
 BACKUP_DIR="$MC_DIR/backup"
 SRV_DIR="$MC_DIR/server"
 
